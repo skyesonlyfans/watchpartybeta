@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch-Party by Skye &lt;3</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="theme-color" content="#ff5fa2"/>
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+
+    <main class="container">
+      <header class="hero">
+        <div class="logo">
+          <span class="sparkle">✦</span>
+          <span class="brand">Watch-Party</span>
+          <span class="by">by Skye &lt;3</span>
+        </div>
+        <p class="subtitle">
+          Private rooms. Fullscreen vibes. Watch the host’s browser together — on mobile or desktop.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Join a room</h2>
+
+        <div class="grid">
+          <label class="field">
+            <span>Your name</span>
+            <input id="name" maxlength="24" placeholder="Skye, Alex, etc." autocomplete="nickname" />
+          </label>
+
+          <label class="field">
+            <span>Room code</span>
+            <input id="code" maxlength="6" placeholder="A9F2KD" autocomplete="off" spellcheck="false" />
+          </label>
+        </div>
+
+        <div class="row">
+          <button id="joinBtn" class="btn primary">Join as Viewer</button>
+          <button id="hostBtn" class="btn">Join as Host</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+          <button id="createBtn" class="btn glow">Create new room</button>
+          <button id="randomNameBtn" class="btn subtle">Random name</button>
+        </div>
+
+        <p class="hint">
+          Tip: Share your invite link with friends after you join. Rooms are private and not publicly listed.
+        </p>
+      </section>
+
+      <footer class="footer">
+        <span>Made for cozy internet hangouts ✨</span>
+      </footer>
+    </main>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "watch-party-by-skye",
+  "version": "1.0.0",
+  "description": "Watch-Party by Skye <3 \u2014 private room watch parties with host screen-share + chat (mobile & desktop).",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "helmet": "^7.1.0"
+  }
+}

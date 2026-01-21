@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room • Watch-Party by Skye &lt;3</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="theme-color" content="#ff5fa2"/>
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+
+    <main class="room-shell">
+      <header class="room-topbar">
+        <div class="top-left">
+          <a class="backlink" href="/">←</a>
+          <div class="room-title">
+            <div class="brandline">
+              <span class="brand">Watch-Party</span>
+              <span class="by">by Skye &lt;3</span>
+            </div>
+            <div class="room-meta">
+              <span class="pill" id="roomPill">ROOM: ??????</span>
+              <span class="pill subtle" id="rolePill">ROLE: ...</span>
+              <span class="pill subtle" id="countPill">0 here</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-right">
+          <button class="btn subtle" id="copyInviteBtn">Copy invite</button>
+          <button class="btn subtle" id="toggleChatBtn">Chat</button>
+          <button class="btn subtle" id="fullscreenBtn">Fullscreen</button>
+        </div>
+      </header>
+
+      <section class="stage">
+        <div class="video-wrap">
+          <video id="video" autoplay playsinline></video>
+
+          <div class="overlay" id="overlay">
+            <div class="overlay-card">
+              <h2 id="overlayTitle">Connecting…</h2>
+              <p id="overlayText">Hang tight. We’re joining the room.</p>
+
+              <div class="overlay-actions" id="overlayActions"></div>
+
+              <p class="tiny">
+                If screen sharing doesn’t start, try Chrome/Edge on desktop. Some DRM video won’t capture.
+              </p>
+            </div>
+          </div>
+
+          <div class="hud" id="hud">
+            <div class="hud-row">
+              <button class="chip" id="muteBtn">Mute</button>
+              <button class="chip" id="fitBtn">Fit</button>
+              <button class="chip" id="theaterBtn">Theater</button>
+            </div>
+            <div class="hud-row tiny" id="hudNote"></div>
+          </div>
+        </div>
+
+        <aside class="sidepanel" id="sidepanel">
+          <div class="panel-section">
+            <h3>People</h3>
+            <div id="peopleList" class="people"></div>
+          </div>
+
+          <div class="panel-section">
+            <h3>Chat</h3>
+            <div id="chatLog" class="chatlog" aria-live="polite"></div>
+
+            <form id="chatForm" class="chatbox">
+              <input id="chatInput" placeholder="Say something nice…" maxlength="500" autocomplete="off" />
+              <button class="btn primary" type="submit">Send</button>
+            </form>
+
+            <div class="quick-reactions">
+              <button class="chip" data-reaction="❤️">❤️</button>
+              <button class="chip" data-reaction="😂">😂</button>
+              <button class="chip" data-reaction="🔥">🔥</button>
+              <button class="chip" data-reaction="✨">✨</button>
+            </div>
+          </div>
+
+          <div class="panel-section">
+            <h3>Host link</h3>
+            <div class="hostlink">
+              <input id="hostUrl" placeholder="https://example.com" />
+              <button class="btn" id="sendUrlBtn">Share</button>
+            </div>
+            <div class="tiny" id="hostUrlStatus">Viewers can open the link while watching the stream.</div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/room.js"></script>
+  </body>
+</html>
