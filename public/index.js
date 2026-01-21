@@ -30,8 +30,8 @@
   }
 
   function randomName(){
-    const adjectives = ["Cozy","Sparkly","Chill","Sunny","Soft","Frosty","Glimmer","Bouncy","Kind","Silly","Witty","Lush","Mellow","Neon","Velvet"];
-    const nouns = ["Fox","Cloud","Otter","Comet","Pixel","Boba","Mochi","Daisy","Star","Raccoon","Kitten","Penguin","Skater","Cactus","Jelly"];
+    const adjectives = ["Cozy","Salty","Chill","Sunny","Soft","Frosty","Crazy","Tiny","Kind","Silly","Witty","Brazy","Mellow","Neon","Velvet"];
+    const nouns = ["Fox","Cloud","Crash","Comet","Pixel","Boba","Mochi","Daisy","Star","Raccoon","Grill","Face","Skater","Cactus","Jelly"];
     const a = adjectives[Math.floor(Math.random()*adjectives.length)];
     const n = nouns[Math.floor(Math.random()*nouns.length)];
     const num = Math.floor(Math.random()*90+10);
